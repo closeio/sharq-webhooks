@@ -1,0 +1,3 @@
+-e git+ssh://git@github.com/elasticsales/sharq-server.git#egg=sharq-server
+requests==2.4.3
+gevent==1.0.1
