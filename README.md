@@ -52,5 +52,5 @@ This is the sharq message structure which is enqueued.
 
 Retries
 --------
-Webhook recipients are assumed to return an HTTP 200 upon successful reciept of our webhook requests. All other response status codes will trigger the request to be retried. Currently, failed requests are retried indefinitely; this will likely change with http://github.com/plivo/sharq/issues/1
+Webhook recipients are assumed to return an HTTP 200 upon successful reciept of our webhook requests. All other response status codes will trigger the request to be retried. You can use the globally defined retry limit of your sharq-server or you can set the retry limit on a per-job basis using the `requeue_limit` parameter within your enqueue request.
 
