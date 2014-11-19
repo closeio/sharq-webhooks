@@ -39,6 +39,7 @@ This is the sharq message structure which is enqueued.
 {
     'job_id': '1',
     'interval': 1000,
+    'requeue_limit': 3,
     'payload':{
         'url': 'http://example.com/my_webhook_endpoint/',
         'headers': {
