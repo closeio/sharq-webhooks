@@ -18,10 +18,11 @@ class WebhookApplication(object):
                                                 self.config['sharq-server']['port'])
         self.log = logging.getLogger(self.__class__.__name__)
 
-    def enqueue(self, queue_id, job_id, interval, payload):
+    def enqueue(self, queue_id, job_id, interval, requeue_limit, payload):
         request_data = {
             'job_id': job_id,
             'interval': interval,
+            'requeue_limit': requeue_limit,
             'payload': payload,
         }
         try:
